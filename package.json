@@ -1,0 +1,29 @@
+{
+  "name": "breathflow",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.14.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "dev:mobile": "pnpm --filter @breathflow/mobile dev",
+    "dev:api": "pnpm --filter @breathflow/api dev"
+  },
+  "devDependencies": {
+    "turbo": "^2.3.0",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.0",
+    "prettier": "^3.4.0",
+    "eslint": "^9.16.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "BreathFlow",
+    "slug": "breathflow",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "breathflow",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#070A14"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.breathflow.app",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio"],
+        "NSMicrophoneUsageDescription": "BreathFlow uses the mic only for optional breath-detection features.",
+        "NSHealthShareUsageDescription": "Read HRV and respiration data to personalize sessions.",
+        "NSHealthUpdateUsageDescription": "Save mindfulness sessions to Apple Health."
+      }
+    },
+    "android": {
+      "package": "com.breathflow.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#070A14"
+      },
+      "permissions": ["VIBRATE", "WAKE_LOCK"]
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      "expo-av"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
