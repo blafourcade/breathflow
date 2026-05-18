@@ -1,6 +1,6 @@
 import { View, type ViewProps } from "react-native";
 import { radius, space } from "@breathflow/ui";
-import { useTheme } from "./theme-provider.js";
+import { useTheme } from "./theme-provider";
 
 interface Props extends ViewProps {
   elevated?: boolean;

@@ -104,6 +104,6 @@ export interface LeaderboardEntry {
   userId: string;
   username: string;
   avatarUrl: string | null;
-  score: number;
+  scoreSeconds: number;
   rank: number;
 }

@@ -2,10 +2,7 @@ import { z } from "zod";
 import { handle } from "../../../shared/http/index";
 import { requireUser } from "../../auth/require-user";
 import { listBoltUseCase, recordBoltUseCase } from "../application/use-cases";
-import { boltRepository } from "../infrastructure/bolt.repository";
-
-const record = recordBoltUseCase(boltRepository);
-const list = listBoltUseCase(boltRepository);
+import { getBoltRepository } from "../infrastructure/index";
 
 const Body = z.object({
   seconds: z.number().min(0).max(600),
@@ -15,7 +12,7 @@ const Body = z.object({
 export function GET() {
   return handle(async () => {
     const user = await requireUser();
-    return list(user.id);
+    return listBoltUseCase(getBoltRepository())(user.id);
   });
 }
 
@@ -23,6 +20,10 @@ export function POST(req: Request) {
   return handle(async () => {
     const user = await requireUser();
     const body = Body.parse(await req.json());
-    return record({ userId: user.id, seconds: body.seconds, notes: body.notes ?? null });
+    return recordBoltUseCase(getBoltRepository())({
+      userId: user.id,
+      seconds: body.seconds,
+      notes: body.notes ?? null,
+    });
   });
 }

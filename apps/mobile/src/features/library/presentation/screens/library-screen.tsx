@@ -3,10 +3,10 @@ import { FlatList, View } from "react-native";
 import { useRouter } from "expo-router";
 import { PRESETS, type BreathPattern } from "@breathflow/breath-engine";
 import { space } from "@breathflow/ui";
-import { Card } from "../../../../shared/ui/card.js";
-import { Chip } from "../../../../shared/ui/chip.js";
-import { Text } from "../../../../shared/ui/text.js";
-import { Button } from "../../../../shared/ui/button.js";
+import { Card } from "../../../../shared/ui/card";
+import { Chip } from "../../../../shared/ui/chip";
+import { Text } from "../../../../shared/ui/text";
+import { Button } from "../../../../shared/ui/button";
 
 const CATEGORIES = ["all", "calm", "focus", "energize", "sleep", "performance", "pranayama"] as const;
 type Category = (typeof CATEGORIES)[number];

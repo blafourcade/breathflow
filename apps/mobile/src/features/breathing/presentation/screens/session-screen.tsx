@@ -4,11 +4,11 @@ import { useRouter, useLocalSearchParams } from "expo-router";
 import { useKeepAwake } from "expo-keep-awake";
 import { getPreset, type Phase } from "@breathflow/breath-engine";
 import { space } from "@breathflow/ui";
-import { useTheme } from "../../../../shared/ui/theme-provider.js";
-import { Text } from "../../../../shared/ui/text.js";
-import { PhaseRing } from "../components/phase-ring.js";
-import { ProgressDots } from "../components/progress-dots.js";
-import { useSession } from "../../application/use-session.js";
+import { useTheme } from "../../../../shared/ui/theme-provider";
+import { Text } from "../../../../shared/ui/text";
+import { PhaseRing } from "../components/phase-ring";
+import { ProgressDots } from "../components/progress-dots";
+import { useSession } from "../../application/use-session";
 
 const PHASE_LABEL: Record<Phase, string> = {
   inhale: "Inhale",

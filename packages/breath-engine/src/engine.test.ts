@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
-import { BreathEngine, buildSteps, estimateTotalDurationMs } from "./engine.js";
-import { getPreset, PRESETS } from "./presets.js";
-import { classifyBolt, averageBolt } from "./bolt.js";
+import { BreathEngine, buildSteps, estimateTotalDurationMs } from "./engine";
+import { getPreset, PRESETS } from "./presets";
+import { classifyBolt, averageBolt } from "./bolt";
 
 describe("buildSteps", () => {
   it("expands a box pattern to 4 phases per round", () => {

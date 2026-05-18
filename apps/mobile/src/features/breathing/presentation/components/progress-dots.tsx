@@ -1,6 +1,6 @@
 import { View } from "react-native";
 import { space } from "@breathflow/ui";
-import { useTheme } from "../../../../shared/ui/theme-provider.js";
+import { useTheme } from "../../../../shared/ui/theme-provider";
 
 interface Props {
   total: number;

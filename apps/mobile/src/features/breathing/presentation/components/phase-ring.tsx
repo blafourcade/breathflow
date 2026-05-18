@@ -8,7 +8,7 @@ import {
   withTiming,
 } from "react-native-reanimated";
 import type { Phase } from "@breathflow/breath-engine";
-import { useTheme } from "../../../../shared/ui/theme-provider.js";
+import { useTheme } from "../../../../shared/ui/theme-provider";
 
 interface Props {
   phase: Phase | null;

@@ -1,7 +1,7 @@
 import { View } from "react-native";
 import { space } from "@breathflow/ui";
-import { Card } from "./card.js";
-import { Text } from "./text.js";
+import { Card } from "./card";
+import { Text } from "./text";
 
 interface Props {
   value: string;

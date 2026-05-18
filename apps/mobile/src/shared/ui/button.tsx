@@ -6,8 +6,8 @@ import {
   type ViewStyle,
 } from "react-native";
 import { radius, space } from "@breathflow/ui";
-import { Text } from "./text.js";
-import { useTheme } from "./theme-provider.js";
+import { Text } from "./text";
+import { useTheme } from "./theme-provider";
 
 type Variant = "primary" | "secondary" | "ghost" | "danger";
 type Size = "lg" | "md" | "sm";

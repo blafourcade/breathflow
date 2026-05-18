@@ -2,10 +2,10 @@ import { View } from "react-native";
 import { useRouter } from "expo-router";
 import { PRESETS } from "@breathflow/breath-engine";
 import { space } from "@breathflow/ui";
-import { Button } from "../../../../shared/ui/button.js";
-import { Card } from "../../../../shared/ui/card.js";
-import { StatTile } from "../../../../shared/ui/stat-tile.js";
-import { Text } from "../../../../shared/ui/text.js";
+import { Button } from "../../../../shared/ui/button";
+import { Card } from "../../../../shared/ui/card";
+import { StatTile } from "../../../../shared/ui/stat-tile";
+import { Text } from "../../../../shared/ui/text";
 
 export default function HomeScreen() {
   const router = useRouter();

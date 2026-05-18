@@ -2,10 +2,7 @@ import { z } from "zod";
 import { handle } from "../../../shared/http/index";
 import { requireUser } from "../../auth/require-user";
 import { createClanUseCase, listClansUseCase } from "../application/use-cases";
-import { clanRepository } from "../infrastructure/clan.repository";
-
-const create = createClanUseCase(clanRepository);
-const list = listClansUseCase(clanRepository);
+import { getClanRepository } from "../infrastructure/index";
 
 const Body = z.object({
   name: z.string().min(2).max(40),
@@ -19,14 +16,14 @@ const Body = z.object({
 });
 
 export function GET() {
-  return handle(async () => list());
+  return handle(async () => listClansUseCase(getClanRepository())());
 }
 
 export function POST(req: Request) {
   return handle(async () => {
     const user = await requireUser();
     const body = Body.parse(await req.json());
-    return create({
+    return createClanUseCase(getClanRepository())({
       name: body.name,
       slug: body.slug,
       description: body.description,

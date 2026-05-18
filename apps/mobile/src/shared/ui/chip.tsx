@@ -1,7 +1,7 @@
 import { Pressable } from "react-native";
 import { radius, space } from "@breathflow/ui";
-import { Text } from "./text.js";
-import { useTheme } from "./theme-provider.js";
+import { Text } from "./text";
+import { useTheme } from "./theme-provider";
 
 interface Props {
   label: string;

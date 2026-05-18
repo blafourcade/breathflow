@@ -1,8 +1,8 @@
 import { View } from "react-native";
 import { space } from "@breathflow/ui";
-import { Card } from "../../../../shared/ui/card.js";
-import { StatTile } from "../../../../shared/ui/stat-tile.js";
-import { Text } from "../../../../shared/ui/text.js";
+import { Card } from "../../../../shared/ui/card";
+import { StatTile } from "../../../../shared/ui/stat-tile";
+import { Text } from "../../../../shared/ui/text";
 
 export default function ProfileScreen() {
   return (

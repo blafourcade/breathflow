@@ -1,6 +1,6 @@
 import { Text as RNText, type TextProps, type TextStyle } from "react-native";
 import { typography } from "@breathflow/ui";
-import { useTheme } from "./theme-provider.js";
+import { useTheme } from "./theme-provider";
 
 export type TextVariant =
   | "display"

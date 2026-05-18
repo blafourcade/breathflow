@@ -1,4 +1,4 @@
-import type { BreathPattern } from "./types.js";
+import type { BreathPattern } from "./types";
 
 export const PRESETS: BreathPattern[] = [
   {

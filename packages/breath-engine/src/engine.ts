@@ -5,7 +5,7 @@ import type {
   PhaseDuration,
   SessionResult,
   SessionTick,
-} from "./types.js";
+} from "./types";
 
 export interface EngineCallbacks {
   onTick?: (tick: SessionTick) => void;

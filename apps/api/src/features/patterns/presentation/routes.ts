@@ -2,16 +2,13 @@ import { handle } from "../../../shared/http/index";
 import { requireUser } from "../../auth/require-user";
 import { createPatternUseCase } from "../application/create-pattern";
 import { listPatternsUseCase } from "../application/list-patterns";
-import { patternRepository } from "../infrastructure/pattern.repository";
+import { getPatternRepository } from "../infrastructure/index";
 import { CreatePatternDto } from "./dto";
-
-const create = createPatternUseCase(patternRepository);
-const list = listPatternsUseCase(patternRepository);
 
 export function GET() {
   return handle(async () => {
     const user = await requireUser();
-    return list(user.id);
+    return listPatternsUseCase(getPatternRepository())(user.id);
   });
 }
 
@@ -19,7 +16,7 @@ export function POST(req: Request) {
   return handle(async () => {
     const user = await requireUser();
     const body = CreatePatternDto.parse(await req.json());
-    return create({
+    return createPatternUseCase(getPatternRepository())({
       ownerId: user.id,
       name: body.name,
       slug: body.slug,
