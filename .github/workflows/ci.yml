@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 10 }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile=false
+      - name: Typecheck breath-engine
+        run: pnpm --filter @breathflow/breath-engine typecheck
+      - name: Test breath-engine
+        run: pnpm --filter @breathflow/breath-engine test
+      - name: Typecheck types
+        run: pnpm --filter @breathflow/types typecheck
+      - name: Typecheck ui
+        run: pnpm --filter @breathflow/ui typecheck
+
+  api:
+    runs-on: ubuntu-latest
+    needs: packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 10 }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile=false
+      - name: Typecheck api
+        env:
+          DATABASE_URL: postgres://stub:stub@localhost:5432/stub
+        run: pnpm --filter @breathflow/api typecheck
+
+  mobile:
+    runs-on: ubuntu-latest
+    needs: packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 10 }
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile=false
+      - name: Typecheck mobile
+        run: pnpm --filter @breathflow/mobile typecheck

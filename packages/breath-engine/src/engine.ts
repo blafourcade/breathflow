@@ -145,7 +145,12 @@ export class BreathEngine {
     }
 
     if (!next) {
-      this.completedRounds = this.pattern.rounds;
+      if (prev && this.completedRounds !== prev.round) {
+        this.completedRounds = prev.round;
+        this.callbacks.onRoundComplete?.(prev.round);
+      } else {
+        this.completedRounds = this.pattern.rounds;
+      }
       this.complete();
       return;
     }

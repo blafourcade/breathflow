@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { ClerkProvider } from "@clerk/nextjs";
 
 export const metadata = {
@@ -6,7 +5,11 @@ export const metadata = {
   description: "Backend for the BreathFlow breathwork app",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <ClerkProvider>
       <html lang="en">
