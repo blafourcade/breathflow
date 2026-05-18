@@ -1,9 +1,9 @@
-import { handle } from "../../../shared/http/index.js";
-import { requireUser } from "../../auth/require-user.js";
-import { createPatternUseCase } from "../application/create-pattern.js";
-import { listPatternsUseCase } from "../application/list-patterns.js";
-import { patternRepository } from "../infrastructure/pattern.repository.js";
-import { CreatePatternDto } from "./dto.js";
+import { handle } from "../../../shared/http/index";
+import { requireUser } from "../../auth/require-user";
+import { createPatternUseCase } from "../application/create-pattern";
+import { listPatternsUseCase } from "../application/list-patterns";
+import { patternRepository } from "../infrastructure/pattern.repository";
+import { CreatePatternDto } from "./dto";
 
 const create = createPatternUseCase(patternRepository);
 const list = listPatternsUseCase(patternRepository);

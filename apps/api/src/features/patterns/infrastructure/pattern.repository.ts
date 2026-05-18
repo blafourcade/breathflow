@@ -1,12 +1,12 @@
 import { desc, eq, or } from "drizzle-orm";
-import { db } from "../../../shared/db/client.js";
-import { patterns } from "../../../shared/db/schema.js";
+import { db } from "../../../shared/db/client";
+import { patterns } from "../../../shared/db/schema";
 import type {
   NewPattern,
   PatternEntity,
   Visibility,
-} from "../domain/entities.js";
-import type { PatternRepository } from "../domain/ports.js";
+} from "../domain/entities";
+import type { PatternRepository } from "../domain/ports";
 
 export const patternRepository: PatternRepository = {
   async create(input: NewPattern, shareCode: string): Promise<PatternEntity> {

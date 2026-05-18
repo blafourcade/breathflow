@@ -1,8 +1,8 @@
 import { auth } from "@clerk/nextjs/server";
 import { eq } from "drizzle-orm";
-import { db } from "../../shared/db/client.js";
-import { users } from "../../shared/db/schema.js";
-import { NotFoundError, UnauthorizedError } from "../../shared/http/index.js";
+import { db } from "../../shared/db/client";
+import { users } from "../../shared/db/schema";
+import { NotFoundError, UnauthorizedError } from "../../shared/http/index";
 
 export interface AuthenticatedUser {
   id: string;

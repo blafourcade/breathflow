@@ -1,8 +1,8 @@
 import { and, eq, or } from "drizzle-orm";
-import { db } from "../../../shared/db/client.js";
-import { friends, users } from "../../../shared/db/schema.js";
-import type { FriendEdge, FriendStatus } from "../domain/entities.js";
-import type { FriendRepository, UserDirectory } from "../domain/ports.js";
+import { db } from "../../../shared/db/client";
+import { friends, users } from "../../../shared/db/schema";
+import type { FriendEdge, FriendStatus } from "../domain/entities";
+import type { FriendRepository, UserDirectory } from "../domain/ports";
 
 export const friendRepository: FriendRepository = {
   async listForUser(userId: string): Promise<FriendEdge[]> {

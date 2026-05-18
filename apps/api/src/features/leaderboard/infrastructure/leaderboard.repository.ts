@@ -1,8 +1,8 @@
 import { desc, eq, gte, sql as drSql } from "drizzle-orm";
-import { db } from "../../../shared/db/client.js";
-import { sessions, users } from "../../../shared/db/schema.js";
-import type { LeaderboardEntry, LeaderboardPeriod } from "../domain/entities.js";
-import type { LeaderboardRepository } from "../domain/ports.js";
+import { db } from "../../../shared/db/client";
+import { sessions, users } from "../../../shared/db/schema";
+import type { LeaderboardEntry, LeaderboardPeriod } from "../domain/entities";
+import type { LeaderboardRepository } from "../domain/ports";
 
 const DAY_MS = 86_400_000;
 

@@ -1,13 +1,13 @@
 import { desc } from "drizzle-orm";
-import { db } from "../../../shared/db/client.js";
-import { clanMembers, clans } from "../../../shared/db/schema.js";
+import { db } from "../../../shared/db/client";
+import { clanMembers, clans } from "../../../shared/db/schema";
 import type {
   ClanEntity,
   ClanMemberRole,
   ClanVisibility,
   NewClan,
-} from "../domain/entities.js";
-import type { ClanRepository } from "../domain/ports.js";
+} from "../domain/entities";
+import type { ClanRepository } from "../domain/ports";
 
 export const clanRepository: ClanRepository = {
   async create(input: NewClan): Promise<ClanEntity> {

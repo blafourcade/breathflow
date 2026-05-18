@@ -1,8 +1,8 @@
 import { desc, eq } from "drizzle-orm";
-import { db } from "../../../shared/db/client.js";
-import { boltMeasurements } from "../../../shared/db/schema.js";
-import type { BoltEntity, NewBolt } from "../domain/entities.js";
-import type { BoltRepository } from "../domain/ports.js";
+import { db } from "../../../shared/db/client";
+import { boltMeasurements } from "../../../shared/db/schema";
+import type { BoltEntity, NewBolt } from "../domain/entities";
+import type { BoltRepository } from "../domain/ports";
 
 export const boltRepository: BoltRepository = {
   async create(input: NewBolt): Promise<BoltEntity> {

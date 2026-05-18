@@ -1,5 +1,5 @@
-import type { SessionEntity } from "../domain/entities.js";
-import type { SessionRepository } from "../domain/ports.js";
+import type { SessionEntity } from "../domain/entities";
+import type { SessionRepository } from "../domain/ports";
 
 const DEFAULT_LIMIT = 50;
 

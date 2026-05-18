@@ -1,4 +1,4 @@
-import type { NewSession, SessionEntity, StreakState } from "./entities.js";
+import type { NewSession, SessionEntity, StreakState } from "./entities";
 
 export interface SessionRepository {
   create(session: NewSession): Promise<SessionEntity>;

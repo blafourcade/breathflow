@@ -1,9 +1,9 @@
-import type { NewSession, SessionEntity } from "../domain/entities.js";
+import type { NewSession, SessionEntity } from "../domain/entities";
 import type {
   Clock,
   SessionRepository,
   StreakRepository,
-} from "../domain/ports.js";
+} from "../domain/ports";
 
 export interface CreateSessionDeps {
   sessions: SessionRepository;

@@ -1,8 +1,8 @@
 import { z } from "zod";
-import { handle } from "../../../shared/http/index.js";
-import { requireUser } from "../../auth/require-user.js";
-import { listBoltUseCase, recordBoltUseCase } from "../application/use-cases.js";
-import { boltRepository } from "../infrastructure/bolt.repository.js";
+import { handle } from "../../../shared/http/index";
+import { requireUser } from "../../auth/require-user";
+import { listBoltUseCase, recordBoltUseCase } from "../application/use-cases";
+import { boltRepository } from "../infrastructure/bolt.repository";
 
 const record = recordBoltUseCase(boltRepository);
 const list = listBoltUseCase(boltRepository);

@@ -1,5 +1,5 @@
-import type { BoltEntity, NewBolt } from "../domain/entities.js";
-import type { BoltRepository } from "../domain/ports.js";
+import type { BoltEntity, NewBolt } from "../domain/entities";
+import type { BoltRepository } from "../domain/ports";
 
 export function recordBoltUseCase(repo: BoltRepository) {
   return (input: NewBolt): Promise<BoltEntity> => repo.create(input);

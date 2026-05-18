@@ -1,4 +1,4 @@
-import type { FriendEdge, FriendStatus } from "./entities.js";
+import type { FriendEdge, FriendStatus } from "./entities";
 
 export interface FriendRepository {
   listForUser(userId: string): Promise<FriendEdge[]>;

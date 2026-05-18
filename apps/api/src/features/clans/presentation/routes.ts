@@ -1,8 +1,8 @@
 import { z } from "zod";
-import { handle } from "../../../shared/http/index.js";
-import { requireUser } from "../../auth/require-user.js";
-import { createClanUseCase, listClansUseCase } from "../application/use-cases.js";
-import { clanRepository } from "../infrastructure/clan.repository.js";
+import { handle } from "../../../shared/http/index";
+import { requireUser } from "../../auth/require-user";
+import { createClanUseCase, listClansUseCase } from "../application/use-cases";
+import { clanRepository } from "../infrastructure/clan.repository";
 
 const create = createClanUseCase(clanRepository);
 const list = listClansUseCase(clanRepository);

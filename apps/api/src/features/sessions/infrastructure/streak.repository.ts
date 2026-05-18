@@ -1,8 +1,8 @@
 import { eq } from "drizzle-orm";
-import { db } from "../../../shared/db/client.js";
-import { streaks } from "../../../shared/db/schema.js";
-import type { StreakState } from "../domain/entities.js";
-import type { StreakRepository } from "../domain/ports.js";
+import { db } from "../../../shared/db/client";
+import { streaks } from "../../../shared/db/schema";
+import type { StreakState } from "../domain/entities";
+import type { StreakRepository } from "../domain/ports";
 
 export const streakRepository: StreakRepository = {
   async findByUserId(userId: string): Promise<StreakState | null> {

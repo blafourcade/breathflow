@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { createSessionUseCase } from "./create-session.js";
+import { createSessionUseCase } from "./create-session";
 import type {
   SessionRepository,
   StreakRepository,
-} from "../domain/ports.js";
-import type { NewSession, StreakState } from "../domain/entities.js";
+} from "../domain/ports";
+import type { NewSession, StreakState } from "../domain/entities";
 
 function makeRepos() {
   const created: NewSession[] = [];

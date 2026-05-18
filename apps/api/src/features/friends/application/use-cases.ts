@@ -1,6 +1,6 @@
-import { NotFoundError, ValidationError } from "../../../shared/http/index.js";
-import type { FriendEdge } from "../domain/entities.js";
-import type { FriendRepository, UserDirectory } from "../domain/ports.js";
+import { NotFoundError, ValidationError } from "../../../shared/http/index";
+import type { FriendEdge } from "../domain/entities";
+import type { FriendRepository, UserDirectory } from "../domain/ports";
 
 export interface FriendDeps {
   friends: FriendRepository;

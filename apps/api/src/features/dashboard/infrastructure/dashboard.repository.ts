@@ -1,12 +1,12 @@
 import { and, desc, eq, gte, sql as drSql } from "drizzle-orm";
-import { db } from "../../../shared/db/client.js";
+import { db } from "../../../shared/db/client";
 import {
   boltMeasurements,
   sessions,
   streaks,
-} from "../../../shared/db/schema.js";
-import type { DashboardStats } from "../domain/entities.js";
-import type { DashboardRepository } from "../domain/ports.js";
+} from "../../../shared/db/schema";
+import type { DashboardStats } from "../domain/entities";
+import type { DashboardRepository } from "../domain/ports";
 
 const SEVEN_DAYS_MS = 7 * 86_400_000;
 

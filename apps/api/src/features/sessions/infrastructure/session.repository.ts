@@ -1,8 +1,8 @@
 import { desc, eq } from "drizzle-orm";
-import { db } from "../../../shared/db/client.js";
-import { sessions } from "../../../shared/db/schema.js";
-import type { NewSession, SessionEntity } from "../domain/entities.js";
-import type { SessionRepository } from "../domain/ports.js";
+import { db } from "../../../shared/db/client";
+import { sessions } from "../../../shared/db/schema";
+import type { NewSession, SessionEntity } from "../domain/entities";
+import type { SessionRepository } from "../domain/ports";
 
 export const sessionRepository: SessionRepository = {
   async create(input: NewSession): Promise<SessionEntity> {

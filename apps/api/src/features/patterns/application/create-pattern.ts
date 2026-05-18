@@ -1,5 +1,5 @@
-import type { NewPattern, PatternEntity } from "../domain/entities.js";
-import type { PatternRepository } from "../domain/ports.js";
+import type { NewPattern, PatternEntity } from "../domain/entities";
+import type { PatternRepository } from "../domain/ports";
 
 export function createPatternUseCase(repo: PatternRepository) {
   return (input: NewPattern): Promise<PatternEntity> =>

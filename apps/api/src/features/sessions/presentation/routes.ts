@@ -1,10 +1,10 @@
-import { handle } from "../../../shared/http/index.js";
-import { requireUser } from "../../auth/require-user.js";
-import { createSessionUseCase } from "../application/create-session.js";
-import { listSessionsUseCase } from "../application/list-sessions.js";
-import { sessionRepository } from "../infrastructure/session.repository.js";
-import { streakRepository } from "../infrastructure/streak.repository.js";
-import { CreateSessionDto } from "./dto.js";
+import { handle } from "../../../shared/http/index";
+import { requireUser } from "../../auth/require-user";
+import { createSessionUseCase } from "../application/create-session";
+import { listSessionsUseCase } from "../application/list-sessions";
+import { sessionRepository } from "../infrastructure/session.repository";
+import { streakRepository } from "../infrastructure/streak.repository";
+import { CreateSessionDto } from "./dto";
 
 const create = createSessionUseCase({
   sessions: sessionRepository,

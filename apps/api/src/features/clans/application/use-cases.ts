@@ -1,5 +1,5 @@
-import type { ClanEntity, NewClan } from "../domain/entities.js";
-import type { ClanRepository } from "../domain/ports.js";
+import type { ClanEntity, NewClan } from "../domain/entities";
+import type { ClanRepository } from "../domain/ports";
 
 export function createClanUseCase(repo: ClanRepository) {
   return async (input: NewClan): Promise<ClanEntity> => {

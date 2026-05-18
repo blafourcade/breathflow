@@ -1,14 +1,14 @@
 import { z } from "zod";
-import { handle } from "../../../shared/http/index.js";
-import { requireUser } from "../../auth/require-user.js";
+import { handle } from "../../../shared/http/index";
+import { requireUser } from "../../auth/require-user";
 import {
   listFriendsUseCase,
   sendFriendRequestUseCase,
-} from "../application/use-cases.js";
+} from "../application/use-cases";
 import {
   friendRepository,
   userDirectory,
-} from "../infrastructure/friend.repository.js";
+} from "../infrastructure/friend.repository";
 
 const list = listFriendsUseCase(friendRepository);
 const send = sendFriendRequestUseCase({

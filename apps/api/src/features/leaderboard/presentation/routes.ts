@@ -1,7 +1,7 @@
-import { handle } from "../../../shared/http/index.js";
-import { getLeaderboardUseCase } from "../application/use-cases.js";
-import { leaderboardRepository } from "../infrastructure/leaderboard.repository.js";
-import type { LeaderboardPeriod } from "../domain/entities.js";
+import { handle } from "../../../shared/http/index";
+import { getLeaderboardUseCase } from "../application/use-cases";
+import { leaderboardRepository } from "../infrastructure/leaderboard.repository";
+import type { LeaderboardPeriod } from "../domain/entities";
 
 const get = getLeaderboardUseCase(leaderboardRepository);
 
