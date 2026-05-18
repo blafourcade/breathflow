@@ -1,0 +1,4 @@
+- [Product overview](internal/01-product.md) — vision, users, goals, non-goals
+- [Architecture](internal/02-architecture.md) — monorepo + clean-arch conventions
+- [Conventions](internal/03-conventions.md) — code style, naming, doc discipline
+- [Research pointers](internal/04-research-pointers.md) — where breathwork science lives
